@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table - Selenium Testing Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="page-header">
+        <div class="header-container">
+            <a href="index.html" class="home-link">← Back to Home</a>
+            <h1 class="page-title">Table</h1>
+            <p class="page-subtitle">Web Table Handling</p>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section id="webtable-section" class="test-section">
+            <div class="section-header">
+                <span class="section-icon">📊</span>
+                <div>
+                    <h2>Table</h2>
+                    <p class="section-subtitle">Web Table Handling</p>
+                </div>
+            </div>
+            
+            <div class="webtable-container">
+                <div class="webtable-exercise">
+                    <h3>Shopping List</h3>
+                    <p>~ Add all the prices and check if the total is correct</p>
+                    <table id="shopping-table" class="test-table">
+                        <thead>
+                            <tr>
+                                <th>Items</th>
+                                <th>Price</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Chocolate</td>
+                                <td>150</td>
+                            </tr>
+                            <tr>
+                                <td>Apple</td>
+                                <td>180</td>
+                            </tr>
+                            <tr>
+                                <td>Eggs</td>
+                                <td>48</td>
+                            </tr>
+                            <tr>
+                                <td>Corn</td>
+                                <td>480</td>
+                            </tr>
+                            <tr class="total-row">
+                                <td><strong>Total</strong></td>
+                                <td><strong>858</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="webtable-exercise">
+                    <h3>Let's handle it😉</h3>
+                    <p>~ Mark Raj as present</p>
+                    <table id="attendance-table" class="test-table">
+                        <thead>
+                            <tr>
+                                <th>First name</th>
+                                <th>Last name</th>
+                                <th>Email address</th>
+                                <th>Present/Absent</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Koushik</td>
+                                <td>Chatterjee</td>
+                                <td>koushik@letcode.in</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Yashwanth</td>
+                                <td>Raj</td>
+                                <td>yashwanth@letcode.in</td>
+                                <td>
+                                    <input type="checkbox" id="raj-checkbox" name="raj-present" class="test-checkbox">
+                                    <label for="raj-checkbox">Present</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Iron</td>
+                                <td>Man</td>
+                                <td>man@letcode.in</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="webtable-exercise">
+                    <h3>Sortable Tables</h3>
+                    <p>~ Check if the sorting is working properly</p>
+                    <table id="sortable-table" class="test-table sortable-table">
+                        <thead>
+                            <tr>
+                                <th class="sortable-header">Dessert (100g)</th>
+                                <th class="sortable-header">Calories</th>
+                                <th class="sortable-header">Fat (g)</th>
+                                <th class="sortable-header">Carbs (g)</th>
+                                <th class="sortable-header">Protein (g)</th>
+                                <th class="sortable-header">Cholesterol(mg)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Frozen yogurt</td>
+                                <td>159</td>
+                                <td>6</td>
+                                <td>24</td>
+                                <td>4</td>
+                                <td>70</td>
+                            </tr>
+                            <tr>
+                                <td>Ice cream</td>
+                                <td>237</td>
+                                <td>9</td>
+                                <td>37</td>
+                                <td>4</td>
+                                <td>40</td>
+                            </tr>
+                            <tr>
+                                <td>Eclair</td>
+                                <td>262</td>
+                                <td>16</td>
+                                <td>24</td>
+                                <td>6</td>
+                                <td>80</td>
+                            </tr>
+                            <tr>
+                                <td>Cupcake</td>
+                                <td>305</td>
+                                <td>4</td>
+                                <td>67</td>
+                                <td>4</td>
+                                <td>50</td>
+                            </tr>
+                            <tr>
+                                <td>Gingerbread</td>
+                                <td>356</td>
+                                <td>16</td>
+                                <td>49</td>
+                                <td>4</td>
+                                <td>60</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <div id="webtable-result" class="result-display"></div>
+            
+            <!-- Learning Concepts -->
+            <div class="learning-concepts">
+                <h3>On completion of this exercise, you can learn the following concepts.</h3>
+                <ul class="concepts-list">
+                    <li>Web Table concept</li>
+                    <li>WebElement Interface</li>
+                    <li>Chaining of locators</li>
+                    <li>Comparable (Java)</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p><a href="index.html">← Back to Home</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        if (typeof initializeWebtableSection === 'function') {
+            initializeWebtableSection();
+        }
+    </script>
+</body>
+</html>

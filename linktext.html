@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linktext - Selenium Testing Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="page-header">
+        <div class="header-container">
+            <a href="index.html" class="home-link">← Back to Home</a>
+            <h1 class="page-title">Linktext</h1>
+            <p class="page-subtitle">Practice clicking various types of links</p>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section id="linktext-section" class="test-section">
+            <div class="section-header">
+                <span class="section-icon">🔗</span>
+                <div>
+                    <h2>Linktext</h2>
+                    <p class="section-subtitle">Practice clicking various types of links</p>
+                </div>
+            </div>
+            <div class="linktext-container">
+                <div class="link-exercise">
+                    <label>Click the link to navigate home page</label>
+                    <a href="index.html" id="link-home" class="test-link">Home</a>
+                </div>
+                
+                <div class="link-exercise">
+                    <label>Find the URL of the button</label>
+                    <a href="https://letcode.in" id="link-button" class="test-link" target="_blank">Button</a>
+                </div>
+                
+                <div class="link-exercise">
+                    <label>Verify am I broken?</label>
+                    <a href="404.html" id="link-broken" class="test-link">Broken?</a>
+                </div>
+                
+                <div class="link-exercise">
+                    <label>Click the image to go home page</label>
+                    <a href="index.html" id="link-imageLink" class="test-link image-link">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Crect width='100' height='100' fill='%23667eea'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='white'%3EHome%3C/text%3E%3C/svg%3E" alt="Home" id="link-image" class="link-image">
+                    </a>
+                </div>
+                
+                <div class="link-exercise">
+                    <label>How many links are available in this page?</label>
+                    <p>Count all links in this page</p>
+                </div>
+            </div>
+            <div id="linktext-result" class="result-display"></div>
+            
+            <!-- Learning Concepts -->
+            <div class="learning-concepts">
+                <h3>On completion of this exercise, you can learn the following concepts.</h3>
+                <ul class="concepts-list">
+                    <li>findElement(By.linkText())</li>
+                    <li>findElement(By.partialLinkText())</li>
+                    <li>getAttribute("href")</li>
+                    <li>click()</li>
+                    <li>Link Handling</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p><a href="index.html">← Back to Home</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        if (typeof initializeLinktextSection === 'function') {
+            initializeLinktextSection();
+        }
+    </script>
+</body>
+</html>
+
+

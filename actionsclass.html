@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ActionsClass - Selenium Testing Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="page-header">
+        <div class="header-container">
+            <a href="index.html" class="home-link">← Back to Home</a>
+            <h1 class="page-title">ActionsClass</h1>
+            <p class="page-subtitle">Complex interactions: double-click, right-click, context menu</p>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section id="actionsclass-section" class="test-section">
+            <div class="section-header">
+                <span class="section-icon">👆</span>
+                <div>
+                    <h2>ActionsClass</h2>
+                    <p class="section-subtitle">Complex interactions: double-click, right-click, context menu</p>
+                </div>
+            </div>
+            <div class="actionsclass-container">
+                <div class="actions-exercise">
+                    <label>Double click the button</label>
+                    <button type="button" id="doubleClick" class="test-button actions-btn">Double Click Me</button>
+                    <div id="doubleClickResult" class="action-result"></div>
+                </div>
+                
+                <div class="actions-exercise">
+                    <label>Right click the button</label>
+                    <button type="button" id="rightClick" class="test-button actions-btn">Right Click Me</button>
+                    <div id="rightClickResult" class="action-result"></div>
+                </div>
+                
+                <div class="actions-exercise">
+                    <label>Click and Hold</label>
+                    <button type="button" id="hold" class="test-button actions-btn">Button Hold!</button>
+                    <div id="holdResult" class="action-result"></div>
+                </div>
+            </div>
+            <div id="actionsclass-result" class="result-display"></div>
+            
+            <!-- Learning Concepts -->
+            <div class="learning-concepts">
+                <h3>On completion of this exercise, you can learn the following concepts.</h3>
+                <ul class="concepts-list">
+                    <li>Actions Class</li>
+                    <li>doubleClick()</li>
+                    <li>contextClick()</li>
+                    <li>clickAndHold()</li>
+                    <li>build().perform()</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p><a href="index.html">← Back to Home</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        if (typeof initializeActionsClassSection === 'function') {
+            initializeActionsClassSection();
+        }
+    </script>
+</body>
+</html>
+
+

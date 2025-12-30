@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select - Selenium Testing Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="page-header">
+        <div class="header-container">
+            <a href="index.html" class="home-link">← Back to Home</a>
+            <h1 class="page-title">Select</h1>
+            <p class="page-subtitle">Interact with different types of drop-down</p>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section id="select-section" class="test-section">
+            <div class="section-content">
+                <div class="section-header">
+                    <span class="section-icon">📋</span>
+                    <div>
+                        <h2>Select</h2>
+                        <p class="section-subtitle">Interact with different types of drop-down</p>
+                    </div>
+                </div>
+                <div class="select-container">
+                <div class="select-exercise">
+                    <label for="fruits">Select the apple</label>
+                    <select id="fruits" name="fruits" class="test-select">
+                        <option value="">--Select--</option>
+                        <option value="apple">Apple</option>
+                        <option value="orange">Orange</option>
+                        <option value="banana">Banana</option>
+                        <option value="mango">Mango</option>
+                    </select>
+                </div>
+                
+                <div class="select-exercise">
+                    <label for="superheros">Select your super hero</label>
+                    <select id="superheros" name="superheros" class="test-select">
+                        <option value="">--Select--</option>
+                        <option value="am">Ant-Man</option>
+                        <option value="aq">Aquaman</option>
+                        <option value="bt">Batman</option>
+                        <option value="bp">Black Panther</option>
+                        <option value="ca">Captain America</option>
+                        <option value="cm">Captain Marvel</option>
+                        <option value="dm">Doctor Strange</option>
+                        <option value="hk">Hulk</option>
+                        <option value="im">Iron Man</option>
+                        <option value="sm">Spider-Man</option>
+                        <option value="sw">Superwoman</option>
+                        <option value="th">The Flash</option>
+                        <option value="wm">Wonder Woman</option>
+                    </select>
+                </div>
+                
+                <div class="select-exercise">
+                    <label for="lang">Select the last programming language</label>
+                    <select id="lang" name="lang" class="test-select">
+                        <option value="">--Select--</option>
+                        <option value="java">Java</option>
+                        <option value="js">JavaScript</option>
+                        <option value="py">Python</option>
+                        <option value="rb">Ruby</option>
+                        <option value="cpp">C++</option>
+                        <option value="csharp">C#</option>
+                    </select>
+                </div>
+                
+                <div class="select-exercise">
+                    <label for="country">Select India using value</label>
+                    <select id="country" name="country" class="test-select">
+                        <option value="">--Select--</option>
+                        <option value="ind">India</option>
+                        <option value="usa">United States</option>
+                        <option value="uk">United Kingdom</option>
+                        <option value="ca">Canada</option>
+                        <option value="au">Australia</option>
+                    </select>
+                </div>
+            </div>
+            <div id="select-result" class="result-display"></div>
+            </div>
+            
+            <!-- Learning Concepts -->
+            <div class="learning-concepts">
+                <h3>On completion of this exercise, you can learn the following concepts.</h3>
+                <ul class="concepts-list">
+                    <li>Select Class</li>
+                    <li>selectByVisibleText()</li>
+                    <li>selectByValue()</li>
+                    <li>selectByIndex()</li>
+                    <li>getOptions()</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p><a href="index.html">← Back to Home</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        if (typeof initializeSelectSection === 'function') {
+            initializeSelectSection();
+        }
+    </script>
+</body>
+</html>
+
+

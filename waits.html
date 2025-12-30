@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waits - Selenium Testing Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="page-header">
+        <div class="header-container">
+            <a href="index.html" class="home-link">← Back to Home</a>
+            <h1 class="page-title">Waits</h1>
+            <p class="page-subtitle">It's ok to wait but you know..</p>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section id="waits-section" class="test-section">
+            <div class="section-header">
+                <span class="section-icon">⏱️</span>
+                <div>
+                    <h2>Waits</h2>
+                    <p class="section-subtitle">It's ok to wait but you know..</p>
+                </div>
+            </div>
+            <div class="waits-container">
+                <div class="waits-exercise">
+                    <label>Click to see alert</label>
+                    <button type="button" id="alert" class="test-button wait-btn">Simple Alert</button>
+                </div>
+                
+                <div class="waits-exercise">
+                    <label>Wait until alert is present</label>
+                    <button type="button" id="waitalert" class="test-button wait-btn">Wait Alert</button>
+                </div>
+                
+                <div class="waits-exercise">
+                    <label>Wait until change button to be clickable</label>
+                    <button type="button" id="wait-change" class="test-button wait-btn">Change Text to Selenium</button>
+                    <div id="wait-textchange" class="wait-text-display">Click to see what happens?</div>
+                </div>
+                
+                <div class="waits-exercise">
+                    <label>Wait until the button is displayed</label>
+                    <button type="button" id="display" class="test-button wait-btn" style="display: none;">Button Appears in 5 seconds</button>
+                </div>
+                
+                <div class="waits-exercise">
+                    <label>Wait until the button is enabled</label>
+                    <button type="button" id="enable" class="test-button wait-btn" disabled>Button is Disabled</button>
+                </div>
+            </div>
+            <div id="waits-result" class="result-display"></div>
+            
+            <!-- Learning Concepts -->
+            <div class="learning-concepts">
+                <h3>On completion of this exercise, you can learn the following concepts.</h3>
+                <ul class="concepts-list">
+                    <li>WebDriverWait</li>
+                    <li>ExpectedConditions</li>
+                    <li>implicitlyWait()</li>
+                    <li>explicitWait()</li>
+                    <li>fluentWait()</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p><a href="index.html">← Back to Home</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        if (typeof initializeWaitsSection === 'function') {
+            initializeWaitsSection();
+        }
+    </script>
+</body>
+</html>
+
+

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mousehover - Selenium Testing Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="page-header">
+        <div class="header-container">
+            <a href="index.html" class="home-link">← Back to Home</a>
+            <h1 class="page-title">Mousehover</h1>
+            <p class="page-subtitle">Hover over elements to see interactions</p>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section id="mousehover-section" class="test-section">
+            <div class="section-header">
+                <span class="section-icon">🖱️</span>
+                <div>
+                    <h2>Mousehover</h2>
+                    <p class="section-subtitle">Hover over elements to see interactions</p>
+                </div>
+            </div>
+            <div class="mousehover-container">
+                <div class="mousehover-exercise">
+                    <label>Hover over me</label>
+                    <div id="hover" class="hover-element">
+                        Hover me to see
+                        <span class="tooltip" id="tooltip-1">You hovered me!</span>
+                    </div>
+                </div>
+                
+                <div class="mousehover-exercise">
+                    <label>Hover over the button</label>
+                    <button type="button" id="hover2" class="test-button hover-btn">Hover me</button>
+                    <div class="tooltip-content" id="tooltip-2" style="display: none;">You hovered the button!</div>
+                </div>
+            </div>
+            <div id="mousehover-result" class="result-display"></div>
+            
+            <!-- Learning Concepts -->
+            <div class="learning-concepts">
+                <h3>On completion of this exercise, you can learn the following concepts.</h3>
+                <ul class="concepts-list">
+                    <li>Actions Class</li>
+                    <li>moveToElement()</li>
+                    <li>Mouse Hover</li>
+                    <li>Tooltip Handling</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p><a href="index.html">← Back to Home</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        if (typeof initializeMousehoverSection === 'function') {
+            initializeMousehoverSection();
+        }
+    </script>
+</body>
+</html>
+
+

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alert - Selenium Testing Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="page-header">
+        <div class="header-container">
+            <a href="index.html" class="home-link">← Back to Home</a>
+            <h1 class="page-title">Alert</h1>
+            <p class="page-subtitle">Interact with different types of dialog boxes</p>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section id="alert-section" class="test-section">
+            <div class="section-content">
+                <div class="section-header">
+                    <span class="section-icon">⚠️</span>
+                    <div>
+                        <h2>Alert</h2>
+                        <p class="section-subtitle">Interact with different types of dialog boxes</p>
+                    </div>
+                </div>
+                <div class="alert-container">
+                    <div class="alert-exercise">
+                        <label>Click the button to open a simple alert</label>
+                        <button type="button" id="accept" class="test-button alert-btn">Accept</button>
+                    </div>
+                    
+                    <div class="alert-exercise">
+                        <label>Click the button to open a confirm alert</label>
+                        <button type="button" id="confirm" class="test-button confirm-btn">Confirm</button>
+                    </div>
+                    
+                    <div class="alert-exercise">
+                        <label>Click the button to open a prompt alert</label>
+                        <button type="button" id="prompt" class="test-button prompt-btn">Prompt</button>
+                    </div>
+                    
+                    <div class="alert-exercise">
+                        <label>Click the button to open a sweet alert</label>
+                        <button type="button" id="modern" class="test-button alert-btn">Modern Alert</button>
+                    </div>
+                </div>
+                <div id="alert-result" class="result-display"></div>
+            </div>
+            
+            <!-- Learning Concepts -->
+            <div class="learning-concepts">
+                <h3>On completion of this exercise, you can learn the following concepts.</h3>
+                <ul class="concepts-list">
+                    <li>Alert Interface</li>
+                    <li>accept()</li>
+                    <li>dismiss()</li>
+                    <li>getText()</li>
+                    <li>sendKeys()</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p><a href="index.html">← Back to Home</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        if (typeof initializeAlertSection === 'function') {
+            initializeAlertSection();
+        }
+    </script>
+</body>
+</html>
+
+

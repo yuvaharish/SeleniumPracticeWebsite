@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frame - Selenium Testing Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="page-header">
+        <div class="header-container">
+            <a href="index.html" class="home-link">← Back to Home</a>
+            <h1 class="page-title">Frame</h1>
+            <p class="page-subtitle">Interact with different types of frames/iframes</p>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section id="frame-section" class="test-section">
+            <div class="section-content">
+                <div class="section-header">
+                    <span class="section-icon">🖼️</span>
+                    <div>
+                        <h2>Frame</h2>
+                        <p class="section-subtitle">Interact with different types of frames/iframes</p>
+                    </div>
+                </div>
+                
+                <div class="frame-container">
+                    <div class="frame-main-content">
+                        <h3>Main Frame Content</h3>
+                        <p>This is the main frame content. Below are nested frames.</p>
+                    </div>
+                    
+                    <div class="frame-exercise">
+                        <h3>First Frame</h3>
+                        <iframe id="firstFr" name="firstFr" src="about:blank" class="test-iframe"></iframe>
+                    </div>
+                    
+                    <div class="frame-exercise">
+                        <h3>Second Frame</h3>
+                        <iframe id="secondFr" name="secondFr" src="about:blank" class="test-iframe"></iframe>
+                    </div>
+                    
+                    <div class="frame-exercise">
+                        <h3>Third Frame</h3>
+                        <iframe id="thirdFr" name="thirdFr" src="about:blank" class="test-iframe"></iframe>
+                    </div>
+                </div>
+                
+                <div id="frame-result" class="result-display"></div>
+            </div>
+            
+            <!-- Learning Concepts -->
+            <div class="learning-concepts">
+                <h3>On completion of this exercise, you can learn the following concepts.</h3>
+                <ul class="concepts-list">
+                    <li>switchTo().frame()</li>
+                    <li>switchTo().defaultContent()</li>
+                    <li>findElements()</li>
+                    <li>Frame Handling</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p><a href="index.html">← Back to Home</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        if (typeof initializeFrameSection === 'function') {
+            initializeFrameSection();
+        }
+    </script>
+</body>
+</html>

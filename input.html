@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input - Selenium Testing Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="page-header">
+        <div class="header-container">
+            <a href="index.html" class="home-link">← Back to Home</a>
+            <h1 class="page-title">Input</h1>
+            <p class="page-subtitle">Interact with different types of input fields</p>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <!-- Input Section -->
+        <section id="input-section" class="test-section">
+            <div class="section-content">
+                <div class="section-header">
+                    <span class="section-icon">✏️</span>
+                    <div>
+                        <h2>Input</h2>
+                        <p class="section-subtitle">Interact with different types of input fields</p>
+                    </div>
+                </div>
+                <div class="input-container">
+                    <div class="input-exercise">
+                        <label for="fullName">Enter your full Name</label>
+                        <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" class="test-input">
+                    </div>
+                    
+                    <div class="input-exercise">
+                        <label for="appendText">Append a text</label>
+                        <div class="input-with-action">
+                            <input type="text" id="appendText" name="appendText" value="I am good" class="test-input">
+                            <span class="input-hint">(I am good)</span>
+                        </div>
+                    </div>
+                    
+                    <div class="input-exercise">
+                        <label for="getText">What is inside the text box</label>
+                        <div class="input-with-action">
+                            <input type="text" id="getText" name="getText" value="Students" class="test-input" readonly>
+                            <span class="input-hint">(Students)</span>
+                        </div>
+                    </div>
+                    
+                    <div class="input-exercise">
+                        <label for="clearText">Clear the text</label>
+                        <div class="input-with-action">
+                            <input type="text" id="clearText" name="clearText" value="yuvaraj Selenium practice" class="test-input">
+                            <span class="input-hint">(yuvaraj Selenium practice)</span>
+                        </div>
+                    </div>
+                    
+                    <div class="input-exercise">
+                        <label for="disabledInput">Confirm edit field is disabled</label>
+                        <input type="text" id="disabledInput" name="disabledInput" value="This field is disabled" disabled class="test-input">
+                    </div>
+                </div>
+                <div id="input-result" class="result-display"></div>
+            </div>
+            
+            <!-- Learning Concepts -->
+            <div class="learning-concepts">
+                <h3>On completion of this exercise, you can learn the following concepts.</h3>
+                <ul class="concepts-list">
+                    <li>sendKeys()</li>
+                    <li>Keyboard TAB</li>
+                    <li>getAttribute()</li>
+                    <li>clear()</li>
+                    <li>isEnabled()</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p><a href="index.html">← Back to Home</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Initialize only input section
+        if (typeof initializeInputSection === 'function') {
+            initializeInputSection();
+        }
+    </script>
+</body>
+</html>
+
+

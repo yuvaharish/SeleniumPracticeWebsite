@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window - Selenium Testing Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="page-header">
+        <div class="header-container">
+            <a href="index.html" class="home-link">← Back to Home</a>
+            <h1 class="page-title">Windows</h1>
+            <p class="page-subtitle">Window Handling</p>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section id="window-section" class="test-section">
+            <div class="section-content">
+                <div class="section-header">
+                    <span class="section-icon">🪟</span>
+                    <div>
+                        <h2>Windows</h2>
+                        <p class="section-subtitle">Window Handling</p>
+                    </div>
+                </div>
+                
+                <div class="window-container">
+                    <div class="window-exercise">
+                        <h3>Goto Home</h3>
+                        <button type="button" id="win-home" class="test-button window-btn">Open Home Page</button>
+                    </div>
+                    
+                    <div class="window-exercise">
+                        <h3>Open muiltiple windows</h3>
+                        <button type="button" id="multi" class="test-button popup-btn">Muiltiple windows</button>
+                    </div>
+                </div>
+                
+                <div class="window-instructions">
+                    <h3>Instructions:</h3>
+                    <ol>
+                        <li>Click on the home button</li>
+                        <li>Goto the newly opened tab</li>
+                        <li>Print the title of the page</li>
+                        <li>Close the parent window</li>
+                        <li>Close the child window</li>
+                        <li>Click on the Muiltiple windows button</li>
+                        <li>Print all the window title</li>
+                        <li>Close all the windows</li>
+                    </ol>
+                </div>
+                
+                <div id="window-result" class="result-display"></div>
+            </div>
+            
+            <!-- Learning Concepts -->
+            <div class="learning-concepts">
+                <h3>On completion of this exercise, you can learn the following concepts.</h3>
+                <ul class="concepts-list">
+                    <li>Window Handling concept</li>
+                    <li>close()</li>
+                    <li>quit()</li>
+                    <li>getTitle()</li>
+                    <li>List</li>
+                    <li>Set - LinkedHashSet</li>
+                    <li>Iterator or loop</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p><a href="index.html">← Back to Home</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        if (typeof initializeWindowSection === 'function') {
+            initializeWindowSection();
+        }
+    </script>
+</body>
+</html>

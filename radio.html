@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radio - Selenium Testing Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="page-header">
+        <div class="header-container">
+            <a href="index.html" class="home-link">← Back to Home</a>
+            <h1 class="page-title">Radio</h1>
+            <p class="page-subtitle">Interact with different types of radio & check boxes</p>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section id="radio-section" class="test-section">
+            <div class="section-header">
+                <span class="section-icon">🔘</span>
+                <div>
+                    <h2>Radio</h2>
+                    <p class="section-subtitle">Interact with different types of radio & check boxes</p>
+                </div>
+            </div>
+            <div class="radio-container">
+                <div class="radio-exercise">
+                    <label>Select any one</label>
+                    <div class="radio-group">
+                        <input type="radio" id="yes" name="foo" value="yes" class="test-radio">
+                        <label for="yes">Yes</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="no" name="foo" value="no" class="test-radio">
+                        <label for="no">No</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="maybe" name="foo" value="maybe" class="test-radio">
+                        <label for="maybe">Maybe</label>
+                    </div>
+                </div>
+                
+                <div class="radio-exercise">
+                    <label>Find which one is selected</label>
+                    <div class="radio-group">
+                        <input type="radio" id="one" name="bar" value="one" class="test-radio">
+                        <label for="one">One</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="two" name="bar" value="two" class="test-radio" checked>
+                        <label for="two">Two</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="three" name="bar" value="three" class="test-radio">
+                        <label for="three">Three</label>
+                    </div>
+                </div>
+                
+                <div class="radio-exercise">
+                    <label>Confirm last field is disabled</label>
+                    <div class="radio-group">
+                        <input type="radio" id="enabled" name="baz" value="enabled" class="test-radio">
+                        <label for="enabled">Enabled</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="disabled-radio" name="baz" value="disabled" class="test-radio" disabled>
+                        <label for="disabled-radio">Disabled</label>
+                    </div>
+                </div>
+                
+                <div class="radio-exercise">
+                    <label>Find if the checkbox is selected?</label>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="java" name="lang" value="java" class="test-checkbox">
+                        <label for="java">I agree to the terms and conditions</label>
+                    </div>
+                </div>
+                
+                <div class="radio-exercise">
+                    <label>Find if the checkbox is selected?</label>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="kotlin" name="lang2" value="kotlin" class="test-checkbox" checked>
+                        <label for="kotlin">I agree to the terms and conditions</label>
+                    </div>
+                </div>
+            </div>
+            <div id="radio-result" class="result-display"></div>
+            
+            <!-- Learning Concepts -->
+            <div class="learning-concepts">
+                <h3>On completion of this exercise, you can learn the following concepts.</h3>
+                <ul class="concepts-list">
+                    <li>click()</li>
+                    <li>isSelected()</li>
+                    <li>isEnabled()</li>
+                    <li>Radio Button Handling</li>
+                    <li>Checkbox Handling</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p><a href="index.html">← Back to Home</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        if (typeof initializeRadioSection === 'function') {
+            initializeRadioSection();
+        }
+    </script>
+</body>
+</html>
+
+

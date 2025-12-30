@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RobotClass - Selenium Testing Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="page-header">
+        <div class="header-container">
+            <a href="index.html" class="home-link">← Back to Home</a>
+            <h1 class="page-title">RobotClass</h1>
+            <p class="page-subtitle">Right Click and Double Click</p>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section id="robotclass-section" class="test-section">
+            <div class="section-header">
+                <span class="section-icon">⌨️</span>
+                <div>
+                    <h2>RobotClass</h2>
+                    <p class="section-subtitle">Right Click and Double Click</p>
+                </div>
+            </div>
+            
+            <div class="robotclass-container">
+                <div class="robot-exercise">
+                    <div id="right-click-me" class="right-click-box">
+                        right click me
+                    </div>
+                    <div id="context-menu" class="context-menu" style="display: none;">
+                        <div class="context-menu-item">Edit</div>
+                        <div class="context-menu-item">Cut</div>
+                        <div class="context-menu-item">Copy</div>
+                        <div class="context-menu-item">Paste</div>
+                    </div>
+                </div>
+                
+                <div class="robot-exercise">
+                    <button type="button" id="double-click-me" class="test-button double-click-btn">Double-Click Me To See Alert</button>
+                </div>
+            </div>
+            
+            <div id="robotclass-result" class="result-display"></div>
+            
+            <!-- Learning Concepts -->
+            <div class="learning-concepts">
+                <h3>On completion of this exercise, you can learn the following concepts.</h3>
+                <ul class="concepts-list">
+                    <li>Actions Class</li>
+                    <li>contextClick()</li>
+                    <li>doubleClick()</li>
+                    <li>Alert Handling</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p><a href="index.html">← Back to Home</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        if (typeof initializeRobotClassSection === 'function') {
+            initializeRobotClassSection();
+        }
+    </script>
+</body>
+</html>

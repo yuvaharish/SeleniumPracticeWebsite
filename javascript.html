@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - Selenium Testing Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="page-header">
+        <div class="header-container">
+            <a href="index.html" class="home-link">← Back to Home</a>
+            <h1 class="page-title">JavaScript</h1>
+            <p class="page-subtitle">Play with element and smash them</p>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section id="javascript-section" class="test-section">
+            <div class="section-header">
+                <span class="section-icon">⚡</span>
+                <div>
+                    <h2>JavaScript</h2>
+                    <p class="section-subtitle">Play with element and smash them</p>
+                </div>
+            </div>
+            <div class="javascript-container">
+                <div class="javascript-exercise">
+                    <label>Click the button to add a new element</label>
+                    <button type="button" id="js-add" class="test-button js-btn">Add</button>
+                    <div id="js-elements" class="js-dynamic-container"></div>
+                </div>
+                
+                <div class="javascript-exercise">
+                    <label>Click the button to remove an element</label>
+                    <button type="button" id="js-remove" class="test-button js-btn">Remove</button>
+                    <div id="js-elements2" class="js-dynamic-container">
+                        <div class="js-element">Element 1</div>
+                        <div class="js-element">Element 2</div>
+                        <div class="js-element">Element 3</div>
+                    </div>
+                </div>
+                
+                <div class="javascript-exercise">
+                    <label>Click the button to change the text</label>
+                    <button type="button" id="js-change" class="test-button js-btn">Change Text</button>
+                    <p id="js-textchange" class="js-text-display">Click to change this text</p>
+                </div>
+            </div>
+            <div id="javascript-result" class="result-display"></div>
+            
+            <!-- Learning Concepts -->
+            <div class="learning-concepts">
+                <h3>On completion of this exercise, you can learn the following concepts.</h3>
+                <ul class="concepts-list">
+                    <li>findElements()</li>
+                    <li>Dynamic Elements</li>
+                    <li>JavaScriptExecutor</li>
+                    <li>WebElement Handling</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p><a href="index.html">← Back to Home</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        if (typeof initializeJavaScriptSection === 'function') {
+            initializeJavaScriptSection();
+        }
+    </script>
+</body>
+</html>
+
+

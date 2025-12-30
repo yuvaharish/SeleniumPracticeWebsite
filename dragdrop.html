@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag & Drop - Selenium Testing Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="page-header">
+        <div class="header-container">
+            <a href="index.html" class="home-link">← Back to Home</a>
+            <h1 class="page-title">Drag</h1>
+            <p class="page-subtitle">Let's go for a ride 😉 drag me around</p>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section id="dragdrop-section" class="test-section">
+            <div class="section-header">
+                <span class="section-icon">🖱️</span>
+                <div>
+                    <h2>Drag</h2>
+                    <p class="section-subtitle">Let's go for a ride 😉 drag me around</p>
+                </div>
+            </div>
+            
+            <div class="dragdrop-container">
+                <div class="dragdrop-exercise">
+                    <h3>I can only be dragged within the dotted container</h3>
+                    <div class="drag-container">
+                        <div id="draggable-box" class="draggable-box">Drag me</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="dragdrop-result" class="result-display"></div>
+            
+            <!-- Learning Concepts -->
+            <div class="learning-concepts">
+                <h3>On completion of this exercise, you can learn the following concepts.</h3>
+                <ul class="concepts-list">
+                    <li>Actions</li>
+                    <li>dragAndDropBy()</li>
+                    <li>perform()</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p><a href="index.html">← Back to Home</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        if (typeof initializeDragDropSection === 'function') {
+            initializeDragDropSection();
+        }
+    </script>
+</body>
+</html>

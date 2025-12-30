@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button - Selenium Testing Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="page-header">
+        <div class="header-container">
+            <a href="index.html" class="home-link">← Back to Home</a>
+            <h1 class="page-title">Button</h1>
+            <p class="page-subtitle">Interact with different types of buttons</p>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section id="button-section" class="test-section">
+            <div class="section-content">
+                <div class="section-header">
+                    <span class="section-icon">🔘</span>
+                    <div>
+                        <h2>Button</h2>
+                        <p class="section-subtitle">Interact with different types of buttons</p>
+                    </div>
+                </div>
+                <div class="button-container">
+                    <div class="button-exercise">
+                        <label>Click the button</label>
+                        <button type="button" id="btn-home" class="test-button primary-btn">Goto Home</button>
+                    </div>
+                    
+                    <div class="button-exercise">
+                        <label>Find the color of the button</label>
+                        <button type="button" id="color" class="test-button" style="background-color: #ff5722; color: white;">What is my color?</button>
+                    </div>
+                    
+                    <div class="button-exercise">
+                        <label>Confirm button is disabled</label>
+                        <button type="button" id="isDisabled" class="test-button" disabled>Button</button>
+                    </div>
+                    
+                    <div class="button-exercise">
+                        <label>Click and Hold Button</label>
+                        <button type="button" id="longpress" class="test-button primary-btn">Button Hold!</button>
+                    </div>
+                </div>
+                <div id="button-result" class="result-display"></div>
+            </div>
+            
+            <!-- Learning Concepts -->
+            <div class="learning-concepts">
+                <h3>On completion of this exercise, you can learn the following concepts.</h3>
+                <ul class="concepts-list">
+                    <li>click()</li>
+                    <li>getCssValue()</li>
+                    <li>isEnabled()</li>
+                    <li>Actions Class</li>
+                    <li>clickAndHold()</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p><a href="index.html">← Back to Home</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        if (typeof initializeButtonSection === 'function') {
+            initializeButtonSection();
+        }
+    </script>
+</body>
+</html>
+
+

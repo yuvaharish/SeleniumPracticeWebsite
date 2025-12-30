@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drop - Selenium Testing Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="page-header">
+        <div class="header-container">
+            <a href="index.html" class="home-link">← Back to Home</a>
+            <h1 class="page-title">Drop</h1>
+            <p class="page-subtitle">Drag and Drop</p>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section id="droppable-section" class="test-section">
+            <div class="section-header">
+                <span class="section-icon">🖱️</span>
+                <div>
+                    <h2>Drop</h2>
+                    <p class="section-subtitle">Drag and Drop</p>
+                </div>
+            </div>
+            
+            <div class="droppable-container">
+                <div class="droppable-source">
+                    <h3>Source</h3>
+                    <div id="sample-box" class="draggable-item" draggable="true">Drag me to my target</div>
+                </div>
+                
+                <div class="droppable-target">
+                    <h3>Target</h3>
+                    <div id="droppable" class="drop-zone">Drop here</div>
+                </div>
+            </div>
+            
+            <div class="droppable-todo">
+                <h3>TODO</h3>
+                <p>1. Drag the source box with in the target box</p>
+            </div>
+            
+            <div id="droppable-result" class="result-display"></div>
+            
+            <!-- Learning Concepts -->
+            <div class="learning-concepts">
+                <h3>On completion of this exercise, you can learn the following concepts.</h3>
+                <ul class="concepts-list">
+                    <li>Actions</li>
+                    <li>dragAndDrop()</li>
+                    <li>perform()</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p><a href="index.html">← Back to Home</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        if (typeof initializeDroppableSection === 'function') {
+            initializeDroppableSection();
+        }
+    </script>
+</body>
+</html>
+
