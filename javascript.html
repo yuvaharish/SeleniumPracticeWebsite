@@ -26,25 +26,26 @@
             </div>
             <div class="javascript-container">
                 <div class="javascript-exercise">
-                    <label>Click the button to add a new element</label>
-                    <button type="button" id="js-add" class="test-button js-btn">Add</button>
-                    <div id="js-elements" class="js-dynamic-container"></div>
+                    <label>JavaScript-> Send Keys</label>
+                    <input type="text" id="js-sendkeys" class="test-input" placeholder="Enter text">
                 </div>
                 
                 <div class="javascript-exercise">
-                    <label>Click the button to remove an element</label>
-                    <button type="button" id="js-remove" class="test-button js-btn">Remove</button>
-                    <div id="js-elements2" class="js-dynamic-container">
-                        <div class="js-element">Element 1</div>
-                        <div class="js-element">Element 2</div>
-                        <div class="js-element">Element 3</div>
-                    </div>
+                    <label>JavaScript-> Click</label>
+                    <button type="button" id="js-click" class="test-button js-btn">Click via JS</button>
+                    <p id="js-click-result">Not clicked</p>
                 </div>
                 
                 <div class="javascript-exercise">
-                    <label>Click the button to change the text</label>
-                    <button type="button" id="js-change" class="test-button js-btn">Change Text</button>
-                    <p id="js-textchange" class="js-text-display">Click to change this text</p>
+                    <label>JavaScript-> Background color and border color change</label>
+                    <button type="button" id="js-color-change" class="test-button js-btn">Change Colors</button>
+                </div>
+                
+                <div class="javascript-exercise">
+                    <label>JavaScript-> Get attribute</label>
+                    <input type="text" id="js-get-attr" class="test-input" value="Sample Value">
+                    <button type="button" id="js-get-attr-btn" class="test-button js-btn">Get Attribute</button>
+                    <p id="js-attr-result"></p>
                 </div>
             </div>
             <div id="javascript-result" class="result-display"></div>
@@ -53,10 +54,13 @@
             <div class="learning-concepts">
                 <h3>On completion of this exercise, you can learn the following concepts.</h3>
                 <ul class="concepts-list">
-                    <li>findElements()</li>
-                    <li>Dynamic Elements</li>
                     <li>JavaScriptExecutor</li>
-                    <li>WebElement Handling</li>
+                    <li>sendKeys() via JS</li>
+                    <li>click() via JS</li>
+                    <li>Change styles via JS</li>
+                    <li>getAttribute() via JS</li>
+                    <li>Scroll operations via JS</li>
+                    <li>Dynamic Elements</li>
                 </ul>
             </div>
         </section>

@@ -26,19 +26,40 @@
             </div>
             <div class="mousehover-container">
                 <div class="mousehover-exercise">
-                    <label>Hover over me</label>
+                    <label>Hover over me to see suggestions</label>
                     <div id="hover" class="hover-element">
-                        Hover me to see
-                        <span class="tooltip" id="tooltip-1">You hovered me!</span>
+                        Hover me to see button
+                        <div class="suggestions" id="suggestions" style="display: none;">
+                            <a href="https://www.flipkart.com" target="_blank" class="suggestion-link">Flipkart</a>
+                            <a href="https://www.amazon.com" target="_blank" class="suggestion-link">Amazon</a>
+                            <a href="https://www.snapdeal.com" target="_blank" class="suggestion-link">Snapdeal</a>
+                        </div>
                     </div>
                 </div>
                 
                 <div class="mousehover-exercise">
-                    <label>Hover over the button</label>
-                    <button type="button" id="hover2" class="test-button hover-btn">Hover me</button>
-                    <div class="tooltip-content" id="tooltip-2" style="display: none;">You hovered the button!</div>
+                    <label>Hover over the input fields to see tooltips</label>
+                    <form class="tooltip-form">
+                        <div class="form-group">
+                            <label for="firstname">Firstname:</label>
+                            <input type="text" id="firstname" name="firstname" title="Please provide your firstname.">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="lastname">Lastname:</label>
+                            <input type="text" id="lastname" name="lastname" title="Please provide your lastname.">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="address">Address:</label>
+                            <textarea id="address" name="address" rows="3" title="Please provide your address."></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <button type="button" class="show-help-btn">Show help</button>
+                        </div>
+                    </form>
                 </div>
-            </div>
             <div id="mousehover-result" class="result-display"></div>
             
             <!-- Learning Concepts -->

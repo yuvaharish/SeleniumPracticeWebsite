@@ -28,60 +28,80 @@
                 <div class="radio-exercise">
                     <label>Select any one</label>
                     <div class="radio-group">
-                        <input type="radio" id="yes" name="foo" value="yes" class="test-radio">
+                        <input type="radio" id="yes" name="select" value="yes" class="test-radio">
                         <label for="yes">Yes</label>
                     </div>
                     <div class="radio-group">
-                        <input type="radio" id="no" name="foo" value="no" class="test-radio">
+                        <input type="radio" id="no" name="select" value="no" class="test-radio">
                         <label for="no">No</label>
                     </div>
+                </div>
+                
+                <div class="radio-exercise">
+                    <label>Confirm you can select only one radio button</label>
                     <div class="radio-group">
-                        <input type="radio" id="maybe" name="foo" value="maybe" class="test-radio">
-                        <label for="maybe">Maybe</label>
+                        <input type="radio" id="confirm-yes" name="confirm" value="yes" class="test-radio">
+                        <label for="confirm-yes">Yes</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="confirm-no" name="confirm" value="no" class="test-radio">
+                        <label for="confirm-no">No</label>
+                    </div>
+                </div>
+                
+                <div class="radio-exercise">
+                    <label>Find the bug</label>
+                    <div class="radio-group">
+                        <input type="radio" id="bug-yes" name="bug-yes" value="yes" class="test-radio">
+                        <label for="bug-yes">Yes</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="bug-no" name="bug-no" value="no" class="test-radio">
+                        <label for="bug-no">No</label>
                     </div>
                 </div>
                 
                 <div class="radio-exercise">
                     <label>Find which one is selected</label>
                     <div class="radio-group">
-                        <input type="radio" id="one" name="bar" value="one" class="test-radio">
-                        <label for="one">One</label>
+                        <input type="radio" id="foo" name="selected" value="foo" class="test-radio">
+                        <label for="foo">Foo</label>
                     </div>
                     <div class="radio-group">
-                        <input type="radio" id="two" name="bar" value="two" class="test-radio" checked>
-                        <label for="two">Two</label>
-                    </div>
-                    <div class="radio-group">
-                        <input type="radio" id="three" name="bar" value="three" class="test-radio">
-                        <label for="three">Three</label>
+                        <input type="radio" id="bar" name="selected" value="bar" class="test-radio" checked>
+                        <label for="bar">Bar</label>
                     </div>
                 </div>
                 
                 <div class="radio-exercise">
                     <label>Confirm last field is disabled</label>
                     <div class="radio-group">
-                        <input type="radio" id="enabled" name="baz" value="enabled" class="test-radio">
-                        <label for="enabled">Enabled</label>
+                        <input type="radio" id="going" name="status" value="going" class="test-radio">
+                        <label for="going">Going</label>
                     </div>
                     <div class="radio-group">
-                        <input type="radio" id="disabled-radio" name="baz" value="disabled" class="test-radio" disabled>
-                        <label for="disabled-radio">Disabled</label>
+                        <input type="radio" id="not-going" name="status" value="not-going" class="test-radio">
+                        <label for="not-going">Not going</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="maybe" name="status" value="maybe" class="test-radio" disabled>
+                        <label for="maybe">Maybe</label>
                     </div>
                 </div>
                 
                 <div class="radio-exercise">
                     <label>Find if the checkbox is selected?</label>
                     <div class="checkbox-group">
-                        <input type="checkbox" id="java" name="lang" value="java" class="test-checkbox">
-                        <label for="java">I agree to the terms and conditions</label>
+                        <input type="checkbox" id="remember" name="remember" value="remember" class="test-checkbox" checked>
+                        <label for="remember">Remember me</label>
                     </div>
                 </div>
                 
                 <div class="radio-exercise">
-                    <label>Find if the checkbox is selected?</label>
+                    <label>Accept the T&C</label>
                     <div class="checkbox-group">
-                        <input type="checkbox" id="kotlin" name="lang2" value="kotlin" class="test-checkbox" checked>
-                        <label for="kotlin">I agree to the terms and conditions</label>
+                        <input type="checkbox" id="agree" name="agree" value="agree" class="test-checkbox">
+                        <label for="agree">I agree to the FAKE terms and conditions</label>
                     </div>
                 </div>
             </div>

@@ -217,16 +217,6 @@ function initializeAlertSection() {
             }
         });
     }
-    
-    // Modern alert
-    const modernBtn = document.getElementById('modern');
-    if (modernBtn) {
-        modernBtn.addEventListener('click', function() {
-            alert('Modern Alert - This is a sweet alert');
-            resultDiv.textContent = 'Modern alert shown';
-            console.log('Modern alert shown');
-        });
-    }
 }
 
 // ============================================
@@ -454,6 +444,9 @@ function initializeDragDropSection() {
             
             if (e.target === draggableBox) {
                 isDragging = true;
+                draggableBox.textContent = 'Drag me';
+                resultDiv.textContent = 'Dragging started';
+                console.log('Drag started');
             }
         }
         
@@ -484,6 +477,9 @@ function initializeDragDropSection() {
             initialX = currentX;
             initialY = currentY;
             isDragging = false;
+            draggableBox.textContent = 'you draged me sucessfully';
+            resultDiv.textContent = 'Drag operation completed';
+            console.log('Drag ended');
         }
         
         function setTranslate(xPos, yPos, el) {
@@ -688,47 +684,39 @@ function sortTable(table, columnIndex) {
 // ============================================
 function initializeJavaScriptSection() {
     const resultDiv = document.getElementById('javascript-result');
-    let elementCounter = 0;
     
-    // Add element
-    const addBtn = document.getElementById('js-add');
-    const elementsDiv = document.getElementById('js-elements');
-    if (addBtn && elementsDiv) {
-        addBtn.addEventListener('click', function() {
-            elementCounter++;
-            const newElement = document.createElement('div');
-            newElement.className = 'js-element';
-            newElement.textContent = `Element ${elementCounter}`;
-            elementsDiv.appendChild(newElement);
-            resultDiv.textContent = `Element ${elementCounter} added`;
-            console.log(`Element ${elementCounter} added`);
+    // JS Click
+    const jsClickBtn = document.getElementById('js-click');
+    const jsClickResult = document.getElementById('js-click-result');
+    if (jsClickBtn && jsClickResult) {
+        jsClickBtn.addEventListener('click', function() {
+            jsClickResult.textContent = 'Clicked via JavaScript';
+            resultDiv.textContent = 'JS Click executed';
+            console.log('JS Click executed');
         });
     }
     
-    // Remove element
-    const removeBtn = document.getElementById('js-remove');
-    const elements2Div = document.getElementById('js-elements2');
-    if (removeBtn && elements2Div) {
-        removeBtn.addEventListener('click', function() {
-            const lastElement = elements2Div.querySelector('.js-element:last-child');
-            if (lastElement) {
-                lastElement.remove();
-                resultDiv.textContent = 'Last element removed';
-                console.log('Element removed');
-            } else {
-                resultDiv.textContent = 'No elements to remove';
-            }
+    // JS Color Change
+    const colorChangeBtn = document.getElementById('js-color-change');
+    if (colorChangeBtn) {
+        colorChangeBtn.addEventListener('click', function() {
+            colorChangeBtn.style.backgroundColor = 'red';
+            colorChangeBtn.style.border = '2px solid blue';
+            resultDiv.textContent = 'Colors changed via JS';
+            console.log('JS Color change executed');
         });
     }
     
-    // Change text
-    const changeBtn = document.getElementById('js-change');
-    const textChange = document.getElementById('js-textchange');
-    if (changeBtn && textChange) {
-        changeBtn.addEventListener('click', function() {
-            textChange.textContent = 'Text changed successfully!';
-            resultDiv.textContent = 'Text changed';
-            console.log('Text changed');
+    // JS Get Attribute
+    const getAttrBtn = document.getElementById('js-get-attr-btn');
+    const getAttrInput = document.getElementById('js-get-attr');
+    const attrResult = document.getElementById('js-attr-result');
+    if (getAttrBtn && getAttrInput && attrResult) {
+        getAttrBtn.addEventListener('click', function() {
+            const value = getAttrInput.getAttribute('value');
+            attrResult.textContent = `Attribute value: ${value}`;
+            resultDiv.textContent = 'Attribute retrieved via JS';
+            console.log('JS Get Attribute executed');
         });
     }
 }
@@ -741,23 +729,16 @@ function initializeMousehoverSection() {
     
     // Hover element
     const hoverElement = document.getElementById('hover');
-    if (hoverElement) {
+    const suggestions = document.getElementById('suggestions');
+    if (hoverElement && suggestions) {
         hoverElement.addEventListener('mouseenter', function() {
-            const tooltip = document.getElementById('tooltip-1');
-            if (tooltip) {
-                tooltip.style.visibility = 'visible';
-                tooltip.style.opacity = '1';
-            }
-            resultDiv.textContent = 'Hovered over element';
+            suggestions.style.display = 'block';
+            resultDiv.textContent = 'Hovered over element - suggestions shown';
             console.log('Hovered over element');
         });
         
         hoverElement.addEventListener('mouseleave', function() {
-            const tooltip = document.getElementById('tooltip-1');
-            if (tooltip) {
-                tooltip.style.visibility = 'hidden';
-                tooltip.style.opacity = '0';
-            }
+            suggestions.style.display = 'none';
         });
     }
     
@@ -773,6 +754,80 @@ function initializeMousehoverSection() {
         
         hover2Btn.addEventListener('mouseleave', function() {
             tooltip2.style.display = 'none';
+        });
+    }
+    
+    // Tooltip button
+    const tooltipBtn = document.getElementById('hover-tooltip');
+    const tooltip = document.getElementById('tooltip-1');
+    if (tooltipBtn && tooltip) {
+        tooltipBtn.addEventListener('mouseenter', function() {
+            tooltip.style.visibility = 'visible';
+            tooltip.style.opacity = '1';
+            resultDiv.textContent = 'Hovered over tooltip button';
+            console.log('Hovered over tooltip button');
+        });
+        
+        tooltipBtn.addEventListener('mouseleave', function() {
+            tooltip.style.visibility = 'hidden';
+            tooltip.style.opacity = '0';
+        });
+    }
+    
+    // Input suggestions
+    const hoverInput = document.getElementById('hover-input');
+    const inputSuggestions = document.getElementById('input-suggestions');
+    if (hoverInput && inputSuggestions) {
+        hoverInput.addEventListener('mouseenter', function() {
+            inputSuggestions.style.display = 'block';
+            resultDiv.textContent = 'Hovered over input - suggestions shown';
+            console.log('Hovered over input');
+        });
+        
+        hoverInput.addEventListener('mouseleave', function() {
+            // Keep suggestions visible if hovering over them
+            setTimeout(() => {
+                if (!inputSuggestions.matches(':hover')) {
+                    inputSuggestions.style.display = 'none';
+                }
+            }, 100);
+        });
+        
+        inputSuggestions.addEventListener('mouseleave', function() {
+            inputSuggestions.style.display = 'none';
+        });
+        
+        // Handle clicking on suggestions
+        const suggestionItems = inputSuggestions.querySelectorAll('.suggestion-item');
+        suggestionItems.forEach(item => {
+            item.addEventListener('click', function() {
+                hoverInput.value = this.textContent;
+                inputSuggestions.style.display = 'none';
+                resultDiv.textContent = 'Selected: ' + this.textContent;
+                console.log('Selected suggestion:', this.textContent);
+            });
+        });
+    }
+    
+    // Form tooltips
+    const tooltipElements = document.querySelectorAll('input[title], textarea[title]');
+    tooltipElements.forEach(element => {
+        element.addEventListener('mouseenter', function() {
+            resultDiv.textContent = 'Hovered over ' + this.tagName.toLowerCase() + ' - tooltip shown: "' + this.getAttribute('title') + '"';
+            console.log('Hovered over', this.tagName.toLowerCase() + ':', this.getAttribute('title'));
+        });
+        
+        element.addEventListener('mouseleave', function() {
+            resultDiv.textContent = 'Left ' + this.tagName.toLowerCase() + ' - tooltip hidden';
+        });
+    });
+    
+    // Show help button click
+    const showHelpBtn = document.querySelector('.show-help-btn');
+    if (showHelpBtn) {
+        showHelpBtn.addEventListener('click', function() {
+            resultDiv.textContent = 'Show help button clicked';
+            console.log('Show help button clicked');
         });
     }
 }
@@ -792,10 +847,13 @@ function initializeRobotClassSection() {
         rightClickBox.addEventListener('contextmenu', function(e) {
             e.preventDefault();
             const rect = rightClickBox.getBoundingClientRect();
+            const robotRect = robotExercise.getBoundingClientRect();
             contextMenu.style.display = 'block';
             contextMenu.style.position = 'absolute';
-            contextMenu.style.left = (rect.right + 10) + 'px';
-            contextMenu.style.top = rect.top + 'px';
+            contextMenu.style.left = (rect.left - robotRect.left) + 'px';
+            contextMenu.style.top = (rect.bottom - robotRect.top + 5) + 'px';
+            currentIndex = -1;
+            updateFocus();
             resultDiv.textContent = 'Right click detected';
             console.log('Right click detected');
         });
@@ -808,14 +866,62 @@ function initializeRobotClassSection() {
         });
         
         // Context menu items
-        const menuItems = contextMenu.querySelectorAll('.context-menu-item');
-        menuItems.forEach(item => {
+        const menuItems = contextMenu.querySelectorAll('li.context-menu-item:not(.context-menu-separator)');
+        let currentIndex = -1;
+        
+        // Function to update focus
+        const updateFocus = () => {
+            menuItems.forEach((item, index) => {
+                if (index === currentIndex) {
+                    item.classList.add('context-menu-hover');
+                } else {
+                    item.classList.remove('context-menu-hover');
+                }
+            });
+        };
+        
+        menuItems.forEach((item, index) => {
             item.addEventListener('click', function() {
-                resultDiv.textContent = `Context menu: ${this.textContent} selected`;
-                console.log(`Context menu: ${this.textContent}`);
+                const text = this.querySelector('span').textContent;
+                resultDiv.textContent = `Context menu: ${text} selected`;
+                console.log(`Context menu: ${text}`);
                 contextMenu.style.display = 'none';
+                currentIndex = -1;
+                updateFocus();
+            });
+            
+            item.addEventListener('mouseenter', function() {
+                currentIndex = index;
+                updateFocus();
             });
         });
+        
+        // Keyboard navigation
+        const handleKeyDown = (e) => {
+            if (contextMenu.style.display === 'block') {
+                if (e.key === 'ArrowDown') {
+                    e.preventDefault();
+                    currentIndex = (currentIndex + 1) % menuItems.length;
+                    updateFocus();
+                } else if (e.key === 'ArrowUp') {
+                    e.preventDefault();
+                    currentIndex = currentIndex <= 0 ? menuItems.length - 1 : currentIndex - 1;
+                    updateFocus();
+                } else if (e.key === 'Enter') {
+                    e.preventDefault();
+                    if (currentIndex >= 0) {
+                        menuItems[currentIndex].click();
+                    }
+                } else if (e.key === 'Escape') {
+                    e.preventDefault();
+                    contextMenu.style.display = 'none';
+                    currentIndex = -1;
+                    updateFocus();
+                }
+            }
+        };
+        
+        document.addEventListener('keydown', handleKeyDown);
     }
     
     // Double click button

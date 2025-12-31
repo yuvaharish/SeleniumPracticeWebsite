@@ -28,23 +28,27 @@
                 
                 <div class="frame-container">
                     <div class="frame-main-content">
-                        <h3>Main Frame Content</h3>
-                        <p>This is the main frame content. Below are nested frames.</p>
+                        <h3>Frame Demo</h3>
+                        <p>Interact with frames below.</p>
+                        <form>
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name" class="test-input">
+                        </form>
                     </div>
                     
                     <div class="frame-exercise">
-                        <h3>First Frame</h3>
-                        <iframe id="firstFr" name="firstFr" src="about:blank" class="test-iframe"></iframe>
+                        <h3>Frame 1</h3>
+                        <iframe id="firstFr" name="firstFr" srcdoc="<html><body><h4>Frame 1 Content</h4><input type='text' placeholder='Enter text in frame 1'></body></html>" class="test-iframe"></iframe>
                     </div>
                     
                     <div class="frame-exercise">
-                        <h3>Second Frame</h3>
-                        <iframe id="secondFr" name="secondFr" src="about:blank" class="test-iframe"></iframe>
+                        <h3>Frame 2</h3>
+                        <iframe id="secondFr" name="secondFr" srcdoc="<html><body><h4>Frame 2 Content</h4><button id='frame2-btn'>Click me in frame 2</button><script>document.getElementById('frame2-btn').addEventListener('click', function() { this.textContent = 'Frame2 tested'; });</script></body></html>" class="test-iframe"></iframe>
                     </div>
                     
                     <div class="frame-exercise">
-                        <h3>Third Frame</h3>
-                        <iframe id="thirdFr" name="thirdFr" src="about:blank" class="test-iframe"></iframe>
+                        <h3>Frame 3</h3>
+                        <iframe id="thirdFr" name="thirdFr" srcdoc="<html><body><h4>Frame 3 Content</h4><button id='frame3-btn'>click me</button><script>document.getElementById('frame3-btn').addEventListener('click', function() { this.textContent = 'you tested the Frame 3'; });</script></body></html>" class="test-iframe"></iframe>
                     </div>
                 </div>
                 
