@@ -427,8 +427,15 @@ function initializeWindowSection() {
             const win3 = window.open('select.html', 'window3', 'width=600,height=400');
             if (win3) openedWindows.push(win3);
             
-            resultDiv.textContent = `Opened ${openedWindows.length} windows`;
-            console.log(`Opened ${openedWindows.length} windows`);
+            // Check if any windows were blocked
+            if (!win1 || !win2 || !win3 || win1.closed || win2.closed || win3.closed) {
+                alert('Popups were blocked! Please verify your browser settings allow popups for this site.');
+                resultDiv.textContent = 'Error: Some windows were blocked by the browser.';
+                console.error('Popup blocker detected');
+            } else {
+                resultDiv.textContent = `Opened ${openedWindows.length} windows`;
+                console.log(`Opened ${openedWindows.length} windows`);
+            }
         });
     }
 }
