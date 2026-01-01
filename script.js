@@ -416,21 +416,19 @@ function initializeWindowSection() {
     if (multiBtn) {
         multiBtn.addEventListener('click', function() {
             openedWindows = [];
-            // Open windows with slight delay to avoid popup blocker
-            setTimeout(() => {
-                const win1 = window.open('input.html', 'window1', 'width=600,height=400');
-                if (win1) openedWindows.push(win1);
-            }, 100);
-            setTimeout(() => {
-                const win2 = window.open('button.html', 'window2', 'width=600,height=400');
-                if (win2) openedWindows.push(win2);
-            }, 200);
-            setTimeout(() => {
-                const win3 = window.open('select.html', 'window3', 'width=600,height=400');
-                if (win3) openedWindows.push(win3);
-                resultDiv.textContent = `Opened ${openedWindows.length} windows`;
-                console.log(`Opened ${openedWindows.length} windows`);
-            }, 300);
+            
+            // Open windows directly to minimize popup blocking
+            const win1 = window.open('input.html', 'window1', 'width=600,height=400');
+            if (win1) openedWindows.push(win1);
+            
+            const win2 = window.open('button.html', 'window2', 'width=600,height=400');
+            if (win2) openedWindows.push(win2);
+            
+            const win3 = window.open('select.html', 'window3', 'width=600,height=400');
+            if (win3) openedWindows.push(win3);
+            
+            resultDiv.textContent = `Opened ${openedWindows.length} windows`;
+            console.log(`Opened ${openedWindows.length} windows`);
         });
     }
 }
