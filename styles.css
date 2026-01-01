@@ -350,6 +350,11 @@ body {
     color: white;
 }
 
+.sweet-btn {
+    background: #4CAF50;
+    color: white;
+}
+
 /* Frame Section */
 .frame-container {
     display: flex;

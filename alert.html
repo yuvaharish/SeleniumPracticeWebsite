@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alert - Selenium Testing Website</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
     <header class="page-header">
@@ -40,6 +41,11 @@
                         <label>Click the button to open a prompt alert</label>
                         <button type="button" id="prompt" class="test-button prompt-btn">Prompt</button>
                     </div>
+                    
+                    <div class="alert-exercise">
+                        <label>Click the button to open a sweet alert</label>
+                        <button type="button" id="sweet" class="test-button sweet-btn">Sweet Alert</button>
+                    </div>
                 </div>
                 <div id="alert-result" class="result-display"></div>
             </div>
@@ -53,6 +59,7 @@
                     <li>dismiss()</li>
                     <li>getText()</li>
                     <li>sendKeys()</li>
+                    <li>Sweet Alert</li>
                 </ul>
             </div>
         </section>

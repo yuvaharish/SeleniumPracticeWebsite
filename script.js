@@ -3,13 +3,13 @@
 // ============================================
 
 // Wait for DOM to be fully loaded
-document.addEventListener('DOMContentLoaded', function() {
-    // Only initialize if initializeAllSections exists (for index page)
-    if (typeof initializeAllSections === 'function') {
-        initializeAllSections();
-    }
-    // Individual section pages will call their specific init functions directly
-});
+// document.addEventListener('DOMContentLoaded', function() {
+//     // Only initialize if initializeAllSections exists (for index page)
+//     if (typeof initializeAllSections === 'function') {
+//         initializeAllSections();
+//     }
+//     // Individual section pages will call their specific init functions directly
+// });
 
 // Initialize all sections
 function initializeAllSections() {
@@ -187,7 +187,7 @@ function initializeAlertSection() {
     const acceptBtn = document.getElementById('accept');
     if (acceptBtn) {
         acceptBtn.addEventListener('click', function() {
-            alert('Hey! Welcome to LetCode');
+            alert('Hey! Welcome to learn Alert');
             resultDiv.textContent = 'Simple alert shown';
             console.log('Simple alert shown');
         });
@@ -197,7 +197,7 @@ function initializeAlertSection() {
     const confirmBtn = document.getElementById('confirm');
     if (confirmBtn) {
         confirmBtn.addEventListener('click', function() {
-            const result = confirm('Are you happy with LetCode?');
+            const result = confirm('Are you happy with Learn Alert?');
             resultDiv.textContent = `Confirm result: ${result ? 'OK' : 'Cancel'}`;
             console.log(`Confirm result: ${result}`);
         });
@@ -215,6 +215,24 @@ function initializeAlertSection() {
                 resultDiv.textContent = 'Prompt cancelled';
                 console.log('Prompt cancelled');
             }
+        });
+    }
+    
+    // Sweet alert
+    const sweetBtn = document.getElementById('sweet');
+    if (sweetBtn) {
+        sweetBtn.addEventListener('click', function() {
+            Swal.fire({
+                title: 'Sweet Alert!',
+                text: 'This is a modern sweet alert.',
+                icon: 'success',
+                confirmButtonText: 'Cool'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    resultDiv.textContent = 'Sweet alert confirmed';
+                    console.log('Sweet alert confirmed');
+                }
+            });
         });
     }
 }
@@ -400,15 +418,15 @@ function initializeWindowSection() {
             openedWindows = [];
             // Open windows with slight delay to avoid popup blocker
             setTimeout(() => {
-                const win1 = window.open('index.html', 'window1', 'width=600,height=400');
+                const win1 = window.open('input.html', 'window1', 'width=600,height=400');
                 if (win1) openedWindows.push(win1);
             }, 100);
             setTimeout(() => {
-                const win2 = window.open('index.html', 'window2', 'width=600,height=400');
+                const win2 = window.open('button.html', 'window2', 'width=600,height=400');
                 if (win2) openedWindows.push(win2);
             }, 200);
             setTimeout(() => {
-                const win3 = window.open('index.html', 'window3', 'width=600,height=400');
+                const win3 = window.open('select.html', 'window3', 'width=600,height=400');
                 if (win3) openedWindows.push(win3);
                 resultDiv.textContent = `Opened ${openedWindows.length} windows`;
                 console.log(`Opened ${openedWindows.length} windows`);
